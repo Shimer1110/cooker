@@ -1,0 +1,58 @@
+{
+	"index.html": {
+		"resources": [
+			"main-dishes.html",
+			"html/main-dishes.html"
+		],
+		"refer": [
+			"main-dishes.html",
+			"html/main-cooker.html",
+			"html/main-my.html",
+			"main-cooker.html",
+			"html/main-dishes.html"
+		]
+	},
+	"html/main-my.html": {
+		"refer": [
+			"html/collection.html",
+			"html/setting.html",
+			"html/message.html",
+			"html/my/message.html",
+			"html/my/order.html",
+			"html/my/cookbook.html",
+			"html/my/collection.html",
+			"html/my/mechineFix.html",
+			"html/my/invite.html",
+			"html/my/setting.html",
+			"html/my/integral.html",
+			"html/my/coupon.html",
+			"html/my/addLable.html",
+			"html/my/address.html",
+			"html/my/menu.html"
+		]
+	},
+	"html/main-dishes.html": {
+		"refer": [
+			"html/dishes/dishes-detail.html",
+			"html/dishes/dishestab.html",
+			"html/dishes/newdishes.html",
+			"html/dishes/top.html",
+			"html/dishes/cuisine.html",
+			"html/dishes/variety.html",
+			"html/dishes/recommend.html",
+			"html/dishes/lable.html",
+			"html/dishes/add-menu.html",
+			"html/dishes/toplist.html"
+		]
+	},
+	"html/dishes/dishestab.html": {
+		"resources": [
+			"html/dishes/dishes-detail.html"
+		],
+		"refer": [
+			"html/dishes/dishes.html",
+			"html/dishes/dishes-detail.html",
+			"html/dishes/material.html"
+		]
+	}
+}

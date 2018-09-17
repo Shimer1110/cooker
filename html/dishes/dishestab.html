@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>首页</title>
+    <link rel="stylesheet" href="../../css/iconfont.css" />
+    <link rel="stylesheet" href="../../css/mui.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <script type="text/javascript" src="../../js/castapp.js" ></script>
+    <script type="text/javascript" src="../../js/mui.js" ></script>
+    <style>
+        html,
+        body {
+            background-color: #efeff4;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="bottom-nav">
+    <nav class="mui-bar mui-bar-tab">
+        <a id="defaultTab" class="mui-tab-item mui-active" href="/html/dishes/dishes-detail.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">菜谱</span>
+        </a>
+        <a class="mui-tab-item" href="/html/dishes/dishes.html">
+            <span class="mui-icon iconfont icon-jiqiao"><span style="display: none;" class="mui-badge">1</span></span>
+            <span class="mui-tab-label">菜品</span>
+        </a>
+        <a class="mui-tab-item" href="/html/dishes/material.html">
+            <span class="mui-icon iconfont icon-wode"></span>
+            <span class="mui-tab-label">原材料</span>
+        </a>
+    </nav>
+</div>
+
+<script type="text/javascript" src="js/castapp.js" ></script>
+<script>
+    ca.init();
+    var pathArray = ['/html/dishes/dishes-detail.html', '/html/dishes/dishes.html','/html/dishes/material.html'];
+    castapp.tabBar(pathArray);
+</script>
+</body>

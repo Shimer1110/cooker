@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link href="../../../css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../css/style.css" />
+</head>
+<header class="mui-bar mui-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <h1 class="mui-title">新增地址</h1>
+</header>
+<div class="mui-content">
+    <div class="add-address-div" style="margin-top: 10px;">
+        <form class="mui-input-group public-lable-txt" action="javascript:;">
+            <div class="mui-input-row">
+                <label>联系人</label>
+                <input id="name" type="text" class="mui-input-clear" placeholder="收货人姓名">
+            </div>
+            
+            <div class="mui-input-row">
+                <label>联系电话</label>
+                <input id="phone" type="text" class="mui-input-clear" placeholder="收货人手机号">
+            </div>
+            <div class="mui-input-row">
+                <label>收货地址</label>
+                <input id="address" type="text" class="mui-input-clear" placeholder="小区/公司/学校">
+            </div>
+            <div>
+                <textarea id="text" placeholder="详细地址"></textarea>
+            </div>
+        </form>
+        <button id="confirm" class="public-green-btn public-btn-block">确定</button>
+    </div>
+</div>
+<script src="js/castapp.js"></script>
+<script>
+    ca.init();
+
+    var text = ca.id('text');
+    var confirmBtn = ca.id('confirm');
+
+    confirmBtn.addEventListener('tap', function () {
+        var name = ca.id('name').value;
+        var phone = ca.id('phone').value;
+        var city = ca.id('city').value;
+        var address = text.value;
+
+        if (name == '') {
+            ca.prompt('收货人姓名不能为空');
+            return;
+        }
+        if (phone == '') {
+            ca.prompt('收货人手机号码不能为空');
+            return;
+        }
+        if (city == '' || address == '') {
+            ca.prompt('收货地址不能为空');
+            return;
+        }
+
+        var request_url = localStorage.getItem('request_url');
+        var login_phone = localStorage.getItem('login_phone');
+        ca.get({
+            url: request_url + 'User/add_address',
+            data: {
+                phone_data1: login_phone,
+                name_data: name,
+                sex_data: sex,
+                phone_data2: phone,
+                address_data: city + address
+            }, succFn: function (data) {
+
+                if (data > 0) {
+                    ca.prompt('添加成功');
+
+                    //通知一下address刷新一下吧，因为我添加的新数据是不是要上去
+                    var arr = ['address'];
+                    ca.sendNotice(arr, 'update', {});
+                    ca.closeCurrentInterface();
+
+                } else {
+                    ca.prompt('添加失败');
+                }
+
+            }
+        })
+
+
+    });
+
+</script>
+</body>
+
+</html>

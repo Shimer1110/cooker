@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>我的</title>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/iconfont.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <style>
+        .head-icon {
+            margin-left: 20px;
+            margin-top: 15px;
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+        }
+
+        .user-info {
+            background: white;
+            padding-bottom: 3px;
+        }
+
+        .user-lable {
+            border-top: 1px solid #DDDDDD;
+            padding: 5px;
+        }
+
+        .user-lable-list {
+            margin-left: 70px;
+            overflow: hidden;
+        }
+
+        .user-lable-item {
+            margin-left: 10px;
+            background: white;
+            border: 1px solid #DDDDDD;
+            float: left;
+            padding: 4px;
+            border-radius: 7px;
+            margin: 2px 2px;
+        }
+        .money{
+	overflow: hidden;
+	background: #fff;  border-top:1px solid #DDDDDD;;
+	 }
+	
+	.money h5,span{
+	color:#666;
+}
+.money div{
+	width:50%;
+	float: left;
+	padding:8px 0px;
+	text-align: center;
+	border-right:1px solid #e2e2e2;
+}
+    </style>
+</head>
+<body>
+<header class="mui-bar mui-bar-nav">
+    <!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
+    <h1 class="mui-title">我的</h1>
+</header>
+<div class="mui-content">
+    <div id="user">
+        <div class="user-info">
+            <img src="../images/head-icon.jpg" class="head-icon mui-pull-left"/>
+            <span class="dark-big" style="text-align: center;margin-left: 15px;line-height: 40px;">张晓明</span>
+            <p class="gray-medium" style="margin-left: 60px;">烹饪达人，擅长江南菜系</p>
+        </div>
+        <div class="user-lable">
+            <div class="mui-pull-left" style="margin-top: 7px;">
+                <span class="dark-big">个性标签</span>
+            </div>
+            <div class="user-lable-list ">
+                <div class="user-lable-item ">
+                    <span class="gray-small">素食主义者</span>
+                </div>
+                <div class="user-lable-item ">
+                    <span class="gray-small">素食主义者</span>
+                </div>
+                <div class="user-lable-item ">
+                    <span class="gray-small">素食</span>
+                </div>
+                <div class="user-lable-item ">
+                    <span class="gray-small">素食主义者</span>
+                </div>
+                <div class="user-lable-item ">
+                    <span class="gray-small">素食主义者</span>
+                </div>
+                <div class="user-lable-item ">
+                    <span class="gray-small">素食主义者</span>
+                </div>
+                 <div id="add-lable" class="user-lable-item" style="border-radius: 100px;">
+                    <span class="mui-icon mui-icon-plusempty" ></span>
+                </div>
+            </div>
+        </div>  
+    </div>
+    
+    <div class="money">
+	    		<div class="coupon">
+	    			<span style="font-size: 13px;"><span>3</span>个</span>
+	    			<h5>红包</h5>
+	    		</div>
+	    		<div class="integral">
+	    			<span style="font-size: 13px;"><span>200</span>分</span>
+	    			<h5>积分</h5>
+	    		</div>
+	    	</div>
+    
+    <div class="my-list">
+        <ul class="mui-table-view">
+        	<li class="mui-table-view-cell">
+                <a id="message" class="mui-navigate-right dark-big">
+                    <span class="mui-icon iconfont icon-shoucang1"></span>
+                    <span>我的消息</span>
+                </a>
+            </li>
+            <!--<li class="mui-table-view-cell">-->
+                <!--<a id="collection" class="mui-navigate-right dark-big">-->
+                    <!--<span class="mui-icon iconfont icon-shoucang1"></span>-->
+                    <!--<span>我的收藏</span>-->
+                <!--</a>-->
+            <!--</li>-->
+            <li class="mui-table-view-cell">
+                <a id="menu" class="mui-navigate-right dark-big">
+                    <span class="mui-icon iconfont icon-caipu"></span>
+                    <span>我的菜谱</span>
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a id="order" class="mui-navigate-right dark-big">
+                    <span class="mui-icon iconfont icon-icon-2"></span>
+                    <span>我的订单</span>
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a id="shoppingTrolle" class="mui-navigate-right dark-big">
+                    <span class="mui-icon iconfont icon-xiazai1"></span>
+                    <span>购物车</span>
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a id="mechineFix" class="mui-navigate-right dark-big">
+                    <span class="mui-icon iconfont icon-jiqiao"></span>
+                    <span>机器报修</span>
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a id="address" class="mui-navigate-right dark-big">
+                    <span class="mui-icon iconfont icon-dizhi"></span>
+                    <span>收货地址</span>
+
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a id="invite" class="mui-navigate-right dark-big">
+                    <span class="mui-icon iconfont icon-shezhi"></span>
+                    <span>邀请好友</span>
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a id="setting" class="mui-navigate-right dark-big">
+                    <span class="mui-icon iconfont icon-shezhi"></span>
+                    <span>设置</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+</div>
+<script type="text/javascript" src="../js/castapp.js" ></script>
+<script>
+    ca.init();
+    
+    //用户信息
+    var userInfo = ca.className('user-info')[0];
+    userInfo.addEventListener('tap',function(){
+    	ca.newInterface({
+    		url:'/html/my/userInfo.html',
+           id:'/html/my/userInfo'
+    	});
+    });
+    
+    //添加标签
+    var addLable = ca.id('add-lable');
+    addLable.addEventListener('tap',function(){
+    	ca.newInterface({
+    		url:'/html/my/addLable.html',
+           id:'/html/my/addLable'
+    	});
+    });
+    
+    //红包
+    var coupon = ca.className('coupon')[0];
+    coupon.addEventListener('tap',function(){
+    	ca.newInterface({
+    		url:'/html/my/coupon.html',
+           id:'/html/my/coupon'
+    	});
+    });
+    
+    //积分
+     var integral = ca.className('integral')[0];
+    integral.addEventListener('tap',function(){
+    	ca.newInterface({
+    		url:'/html/my/integral.html',
+           id:'/html/my/integral'
+    	});
+    });
+    
+    //我的消息
+    var message = ca.id('message');
+    message.addEventListener('tap',function () {
+       ca.newInterface({
+           url:'/html/my/message.html',
+           id:'/html/my/message'
+       });
+    });
+
+    //我的收藏
+    // var collection = ca.id('collection');
+    // collection.addEventListener('tap',function () {
+    //     ca.newInterface({
+    //         url:'/html/my/collection.html',
+    //         id:'/html/my/collection'
+    //     });
+    // });
+
+    //我的菜谱
+    var menu = ca.id('menu');
+    menu.addEventListener('tap',function () {
+        ca.newInterface({
+            url:'/html/my/menu.html',
+            id:'/html/my/menu'
+        });
+    });
+
+    //我的订单
+    var order = ca.id('order');
+    order.addEventListener('tap',function () {
+        ca.newInterface({
+            url:'/html/my/order.html',
+            id:'/html/my/order'
+        });
+    });
+
+    //购物车
+    var shoppingTrolle = ca.id('shoppingTrolle');
+    shoppingTrolle.addEventListener('tap',function () {
+        ca.newInterface({
+            url:'/html/my/shoppingTrolley.html',
+            id:'/html/my/shoppingTrolley'
+        });
+    });
+
+    //机器报修
+    var mechineFix = ca.id('mechineFix');
+    mechineFix.addEventListener('tap',function () {
+        ca.newInterface({
+            url:'/html/my/mechineFix.html',
+            id:'/html/my/mechineFix'
+        });
+    });
+
+    //收货地址
+    var address = ca.id('address');
+    address.addEventListener('tap',function () {
+        ca.newInterface({
+            url:'/html/my/address.html',
+            id:'/html/my/address'
+        });
+    });
+
+    //邀请好友
+    var invite = ca.id('invite');
+    invite.addEventListener('tap',function () {
+        ca.newInterface({
+            url:'/html/my/invite.html',
+            id:'/html/my/invite'
+        });
+    });
+
+    //设置
+    var setting = ca.id('setting');
+    setting.addEventListener('tap',function () {
+        ca.newInterface({
+            url:'/html/my/setting.html',
+            id:'/html/my/setting'
+        });
+    });
+</script>
+</body>
+</html>

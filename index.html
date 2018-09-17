@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>首页</title>
+    <script src="js/mui.min.js"></script>
+    <script type="text/javascript" src="js/iconfont.js"></script>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/iconfont.css"/>
+    <style>
+        html,
+        body {
+            background-color: #efeff4;
+        }
+        .add-menu-background{
+        	width: 40px;
+        	height: 40px;
+        	background: #007AFF;
+        	border-radius: 40px;
+        }
+        .add-menu-background span{
+        	color: white;
+        	display: block;
+        	text-align: center;
+        	line-height: 40px;
+        	font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+	<div class="add-menu">
+		<div class="add-menu-background">
+			<span class="mui-icon mui-icon-plusempty"></span>
+		</div>
+	</div>
+<div class="bottom-nav">
+    <nav class="mui-bar mui-bar-tab">
+        <a id="defaultTab" class="mui-tab-item mui-active" href="/html/main-dishes.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="/html/main-cooker.html">
+            <span class="mui-icon iconfont icon-jiqiao"><span style="display: none;" class="mui-badge">1</span></span>
+            <span class="mui-tab-label">灶具</span>
+        </a>
+        <a class="mui-tab-item" href="/html/main-my.html">
+            <span class="mui-icon iconfont icon-wode"></span>
+            <span class="mui-tab-label">我的</span>
+        </a>
+    </nav>
+</div>
+
+<script type="text/javascript" src="js/castapp.js" ></script>
+<script>
+    ca.init();
+    var pathArray = ['/html/main-dishes.html', '/html/main-cooker.html','/html/main-my.html'];
+    castapp.tabBar(pathArray);
+</script>
+</body>

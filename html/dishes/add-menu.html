@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <script src="../../js/mui.min.js"></script>
+    <script type="text/javascript" src="../../js/castapp.js"></script>
+    <script src="../../js/mui.picker.js"></script>
+    <script src="../../js/mui.poppicker.js"></script>
+    <script src="../js/mui.js"></script>
+    <!--<script src="../js/mui.picker.min.js"></script>-->
+    <script src="../../js/city.data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+    <link href="../../css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <style>
+body{
+	background: white;
+}
+        .content {
+            background: white;
+            padding: 0 10px;
+        }
+
+ #add-menu-btn {
+            position: absolute;
+            top: 53px;
+            right: 20px;
+            background: #DDDDDD;
+            color: #fff;
+            height: 28px;
+            float: right;
+            line-height: 15px;
+        }
+        .input-row {
+            border-bottom: 1px solid #DDDDDD;
+            height: 45px;
+            line-height: 45px;
+        }
+
+        .select {
+            padding: 0;
+            height: 45px;
+            line-height: 45px;
+            overflow: hidden;
+            border-bottom: 1px solid #DDDDDD;
+        }
+
+        .select select {
+            padding-left: 10px;
+        }
+
+        .mui-btn-block {
+            font-size: 17px;
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+<header class="mui-bar mui-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <h1 class="mui-title">添加菜谱</h1>
+</header>
+<div class="mui-content">
+    <div class="dishes-img">
+        <img src="../../images/home-dishes.jpg"/>
+    </div>
+    <div class="content">
+        <form class="mui-input-group">
+            <div class="input-row">
+                <input type="text" class="mui-input-clear" placeholder="菜谱名">
+            </div>
+            <div class="input-row">
+                <input type="text" class="mui-input-clear" placeholder="链接机器，上传菜谱">
+                <button id="add-menu-btn">上传菜谱</button>
+            </div>
+            <div class="select">
+                <select class="mui-btn-block">
+                    <option value="item-1" disabled="false" selected="">请选择菜系</option>
+                    <option value="item-2">湘菜</option>
+                    <option value="item-3">湘菜-3</option>
+                    <option value="item-4">湘菜-4</option>
+                    <option value="item-5">湘菜-5</option>
+                </select>
+            </div>
+            <div class="select">
+                <select class="mui-btn-block">
+                     <option value="item-1" disabled="false" selected="">请选择标签</option>
+                    <option value="item-2">湘菜-2</option>
+                    <option value="item-3">湘菜-3</option>
+                    <option value="item-4">湘菜-4</option>
+                    <option value="item-5">湘菜-5</option>
+                </select>
+            </div>
+            <div class="select">
+                <select class="mui-btn-block">
+                     <option value="item-1" disabled="false" selected="">请选择品种</option>
+                    <option value="item-2">湘菜-2</option>
+                    <option value="item-3">湘菜-3</option>
+                    <option value="item-4">湘菜-4</option>
+                    <option value="item-5">湘菜-5</option>
+                </select>
+            </div>
+        </form>
+        <div  style="margin: 10px 5px;">
+            <textarea id="textarea" rows="5" placeholder="添加菜谱描述"></textarea>
+        </div>
+         <div class="input-row">
+           <button class="public-b-btn" style="height:45px;width:100%;font-size:18px;">发布</button>
+        </div>
+    </div>
+    
+
+</div>
+<script type="text/javascript">
+
+</script>
+</body>
+
+</html>

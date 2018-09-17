@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link href="../../css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../css/iconfont.css"/>
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <style>
+    	.dishes{
+    		position: relative;
+    		overflow: hidden;
+    	}
+    	
+        /*菜品图片*/
+        .dishes-img {
+            padding-bottom: 10px;
+        }
+
+        /*菜名*/
+        #dishes-name {
+            margin: 10px 0px 5px 10px;
+        }
+        
+        .contain{
+        	margin-left: 10px;
+        	position: relative;
+        }
+
+		.price{
+			margin: 10px;
+		}
+		
+		.amount span{
+			margin-left: 3px;
+			margin-top: 5px;
+			font-size: 18px;
+			font-weight: normal;
+			color: #666;
+		}
+
+        /*评价列表*/
+        #comment_list {
+            padding: 5px;
+        }
+
+        .comment-list-item {
+            margin: 10px 15px;
+            border-bottom: 1px solid #DDDDDD;
+        }
+
+        .comment-head-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            position: relative;
+        }
+
+        .comment-user-name {
+            font-size: 15px;
+            position: relative;
+            top: -12px
+        }
+
+    </style>
+</head>
+
+<body>
+<header class="mui-bar mui-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <h1 class="mui-title">菜品详情</h1>
+</header>
+<div class="mui-content" style="background: white;">
+    <div class="dishes">
+        <img src="../../images/home-dishes.jpg"/>
+        <div>
+        	<div class="mui-ellipsis mui-pull-left" style="position: relative;">
+        		<div id="dishes-name"class="dark-big">红烧排骨套餐</div>
+        		<span class="contain gray-medium">红烧排骨+米饭+配菜</span>
+        		<div class="price">
+        			<span class="red-big" style="font-size: 18px;">￥<span>35</span>元</span>
+        		</div>
+        	</div>
+        	<div class="dishes-describe-r mui-pull-right" style="margin: 15px;10px 0px 0px">
+        		<span class="mui-pull-right gray-medium">已售<span>25份</span></span>
+        		<div class="amount" style="text-align: center;">
+        			<span class="mui-icon mui-icon-minus"></span><span style="font-size: 14px;">1</span><span class="mui-icon mui-icon-plus"></span>
+        		</div>
+        	</div>
+        </div>
+    </div>
+
+
+    <div class="comment">
+        <div id="comment_list">
+            <h5 class="mui-content-padded"style="padding-bottom: 10px;border-bottom: 1px solid #DDDDDD;">商品评价</h5>
+            <div class="comment-list-item">
+                <div class="mui-ellipsis">
+                    <img class="comment-head-icon" src="../../images/head-icon.jpg">
+                    <span><span class="comment-user-name">会飞的鱼</span><span class="mui-pull-right"
+                                                                           style="font-size: 15px;color: #666;">2016-03-25</span></span>
+                </div>
+                <p style="padding-top: 5px;">饭送的很快，跟给力下次还来买，饭送的很快，跟给力下次还来买，饭送的很快，跟给力下次还来买，饭送的很快，跟给力下次还来买，</p>
+            </div>
+            <div class="comment-list-item">
+                <div class="mui-ellipsis">
+                    <img class="comment-head-icon" src="../../images/head-icon.jpg">
+                    <span><span class="comment-user-name">会飞的鱼</span><span class="mui-pull-right"
+                                                                           style="font-size: 15px;color: #666;">2016-03-25</span></span>
+                </div>
+                <p style="padding-top: 5px;">饭送的很快，跟给力下次还来买，饭送的很快，跟给力下次还来买，饭送的很快，跟给力下次还来买，饭送的很快，跟给力下次还来买，</p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<script src="../../js/mui.min.js"></script>
+<script type="text/javascript" src="../../js/castapp.js"></script>
+<script type="text/javascript">
+    ca.init();
+
+</script>
+</body>
+
+</html>

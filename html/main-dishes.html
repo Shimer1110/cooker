@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>首页</title>
+    <script type="text/javascript" src="../js/castapp.js"></script>
+    <script type="text/javascript" src="../js/mui.js"></script>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/mui.css"/>
+    <link rel="stylesheet" href="../css/iconfont.css"/>
+    <style>
+        html,
+        body,
+        .mui-content,
+        .content {
+            background-color: white;
+        }
+
+        .banner-img {
+            width: 100%;
+            height: 200px;
+        }
+
+        .content {
+            margin-top: 40px;
+        }
+
+        .add-menu {
+            bottom: 20px;
+            position: fixed;
+            right: 20px;
+        }
+
+        .add-menu-background {
+            width: 50px;
+            height: 50px;
+            background: #007AFF;
+            border-radius: 50px;
+        }
+
+        .add-menu-background span {
+            color: white;
+            display: block;
+            text-align: center;
+            line-height: 50px;
+            font-size: 35px;
+        }
+    </style>
+<body>
+<header class="mui-bar mui-bar-nav">
+    <h1 class="mui-title">炒菜机</h1>
+</header>
+<div class="mui-content">
+    <!--轮播图-->
+    <div id="slider" class="mui-slider">
+        <div class="mui-slider-group mui-slider-loop">
+            <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#">
+                    <img class="banner-img" src="../images/banner3.jpg">
+                </a>
+            </div>
+            <!-- 第一张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img class="banner-img" src="../images/home-dishes.jpg">
+                </a>
+            </div>
+            <!-- 第二张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img class="banner-img" src="../images/home-dishes.jpg">
+                </a>
+            </div>
+            <!-- 第三张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img class="banner-img" src="../images/home-dishes.jpg">
+                </a>
+            </div>
+            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#">
+                    <img class="banner-img" src="../images/home-dishes.jpg">
+                </a>
+            </div>
+        </div>
+        <div class="mui-slider-indicator">
+            <div class="mui-indicator mui-active"></div>
+            <div class="mui-indicator"></div>
+            <div class="mui-indicator"></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <ul class="mui-table-view mui-grid-view mui-grid-9" style="background: white;border:0;">
+            <li id="newdishes" class="mui-table-view-cell mui-media mui-col-xs-4 " style="border: 0;"><a href="#">
+                <span class="mui-icon mui-icon-home"></span>
+                <div class="mui-media-body">本周上新</div>
+            </a></li>
+            <!--<li id="top" class="mui-table-view-cell mui-media mui-col-xs-4 " style="border: 0;"><a href="#">-->
+                <!--<span class="mui-icon mui-icon-email"><span class="mui-badge">5</span></span>-->
+                <!--<div class="mui-media-body">Top榜</div>-->
+            <!--</a></li>-->
+            <li id="toplist" class="mui-table-view-cell mui-media mui-col-xs-4 " style="border: 0;"><a href="#">
+                <span class="mui-icon mui-icon-chatbubble"></span>
+                <div class="mui-media-body">Top榜</div>
+            </a></li>
+            <li id="cuisine" class="mui-table-view-cell mui-media mui-col-xs-4 " style="border: 0;"><a href="#">
+                <span class="mui-icon mui-icon-chatbubble"></span>
+                <div class="mui-media-body">菜系</div>
+            </a></li>
+            <li id="lable" class="mui-table-view-cell mui-media mui-col-xs-4 " style="border: 0;"><a href="#">
+                <span class="mui-icon mui-icon-location"></span>
+                <div class="mui-media-body">标签</div>
+            </a></li>
+            <li id="variety" class="mui-table-view-cell mui-media mui-col-xs-4 " style="border: 0;"><a href="#">
+                <span class="mui-icon mui-icon-search"></span>
+                <div class="mui-media-body">品种</div>
+            </a></li>
+            <li id="recommend" class="mui-table-view-cell mui-media mui-col-xs-4 " style="border: 0;"><a href="#">
+                <span class="mui-icon mui-icon-phone"></span>
+                <div class="mui-media-body">名厨推荐</div>
+            </a></li>
+
+        </ul>
+    </div>
+
+    <div class="add-menu mui-pull-right">
+        <div class="add-menu-background">
+            <span class="mui-icon mui-icon-plusempty"></span>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    ca.init();
+
+    //本周上新
+    var newdishes = ca.id('newdishes');
+    newdishes.addEventListener('tap', function () {
+        ca.newInterface({
+            url: '../html/dishes/newdishes.html',
+            id: '../html/dishes/newdishes'
+        });
+    });
+
+ //菜系
+    var toplist = ca.id('toplist');
+    toplist.addEventListener('tap', function () {
+        ca.newInterface({
+            url: '../html/dishes/toplist.html',
+            id: '../html/dishes/toplist'
+        });
+    });
+
+
+    //菜系
+    var cuisine = ca.id('cuisine');
+    cuisine.addEventListener('tap', function () {
+        ca.newInterface({
+            url: '../html/dishes/cuisine.html',
+            id: '../html/dishes/cuisine'
+        });
+    });
+
+    //标签
+    var lable = ca.id('lable');
+    lable.addEventListener('tap', function () {
+        console.log('jjj');
+        ca.newInterface({
+            url: '../html/dishes/lable.html',
+            id: '../html/dishes/lable'
+        });
+    });
+
+    //品种
+    var variety = ca.id('variety');
+    variety.addEventListener('tap', function () {
+        ca.newInterface({
+            url: '../html/dishes/variety.html',
+            id: '../html/dishes/variety'
+        });
+    });
+
+    //名厨推荐
+    var recommend = ca.id('recommend');
+    recommend.addEventListener('tap', function () {
+        ca.newInterface({
+            url: '../html/dishes/recommend.html',
+            id: '../html/dishes/recommend'
+        });
+    });
+    
+    //上传菜谱
+    var addMenu = ca.className('add-menu')[0];
+    addMenu.addEventListener('tap',function(){
+    	 ca.newInterface({
+            url: '../html/dishes/add-menu.html',
+            id: '../html/dishes/add-menu'
+        });
+    });
+</script>
+</body>

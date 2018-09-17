@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>首页</title>
+    <script type="text/javascript" src="../../js/mui.js"></script>
+    <script type="text/javascript" src="../../js/castapp.js"></script>
+    <script type="text/javascript" src="../../js/iconfont.js"></script>
+    <link rel="stylesheet" href="../../css/iconfont.css"/>
+    <link rel="stylesheet" href="../../css/mui.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+    <style>
+        html,
+        body {
+            background-color: #efeff4;
+        }
+
+        .operation {
+            margin-right: 20px;
+        }
+
+        .head-icon {
+            border-radius: 100px;
+        }
+
+        .level {
+            color: #FF0000;
+            font-family: Consolas;
+        }
+    </style>
+</head>
+
+<body>
+<header class="mui-bar mui-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <h1 class="mui-title">名厨推荐</h1>
+</header>
+<div class="mui-content">
+
+    <div class="dishes-list">
+        <div id="item1" class="mui-control-content mui-active">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell mui-media">
+                    <a href="javascript:;">
+                        <img class="head-icon mui-media-object mui-pull-left" src="../../images/head-icon.jpg">
+                        <div class="mui-media-body">
+                            <span>张三</span>
+                            <span class="mui-pull-right level">lv<span>3</span></span>
+                            <p>
+                                <span class="operation"><span>36</span>个粉丝</span>
+                                <span class="operation"><span>2</span>个赞</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media">
+                    <a href="javascript:;">
+                        <img class="head-icon mui-media-object mui-pull-left" src="../../images/head-icon.jpg">
+                        <div class="mui-media-body">
+                            <span>张三</span>
+                            <span class="mui-pull-right level">lv<span>3</span></span>
+                            <p>
+                                <span class="operation"><span>36</span>个粉丝</span>
+                                <span class="operation"><span>2</span>个赞</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media">
+                    <a href="javascript:;">
+                        <img class="head-icon mui-media-object mui-pull-left" src="../../images/head-icon.jpg">
+                        <div class="mui-media-body">
+                            <span>张三</span>
+                            <span class="mui-pull-right level">lv<span>3</span></span>
+                            <p>
+                                <span class="operation"><span>36</span>个粉丝</span>
+                                <span class="operation"><span>2</span>个赞</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media">
+                    <a href="javascript:;">
+                        <img class="head-icon mui-media-object mui-pull-left" src="../../images/head-icon.jpg">
+                        <div class="mui-media-body">
+                            <span>张三</span>
+                            <span class="mui-pull-right level">lv<span>3</span></span>
+                            <p>
+                                <span class="operation"><span>36</span>个粉丝</span>
+                                <span class="operation"><span>2</span>个赞</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+</div>
+
+
+<script>
+    ca.init();
+
+    /*点击菜谱跳转到菜谱详情页*/
+    function click_event() {
+        var cell = ca.className('home-dishes-item');
+        for (var i = 0; i < cell.length; i++) {
+            cell[i].addEventListener('tap', function () {
+                console.log('dudh')
+                // var item_id = this.getAttribute('id_data');
+                // localStorage.setItem('item_id', item_id);
+
+                ca.newInterface({
+                    url: '/html/dishes/dishestab.html',
+                    id: '/html/dishes/dishestab'
+                });
+
+            });
+        }
+    }
+
+    click_event();
+</script>
+</body>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>首页</title>
+    <script src="js/mui.min.js"></script>
+    <script type="text/javascript" src="js/iconfont.js"></script>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/mui.css"/>
+    <link rel="stylesheet" href="../css/iconfont.css"/>
+    <style>
+        html,
+        body {
+            background-color: #efeff4;
+        }
+
+        .wrap-search {
+            margin: 15px;
+            background: #E6E6E6;
+            height: 30px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .title {
+            margin: 20px 15px 10px;
+            color: #6d6d72;
+            font-size: 15px;
+            padding-bottom: 51px;
+        }
+
+        .home-dishes-list {
+            width: 100%;
+            position: absolute;
+            overflow: hidden;
+
+        }
+
+        .home-dishes-item {
+            margin: 5px;
+            background-color: white;
+            width: 47%;
+            float: left;
+            border: 1px solid white;
+            position: relative;
+        }
+
+        .home-dishes-item-text {
+            margin: 5px;
+        }
+
+        #like {
+            position: relative;
+            margin-right: 10px;
+            float: right;
+        }
+
+        #collect {
+            position: relative;
+            margin-right: 15px;
+            float: right;
+        }
+
+    </style>
+</head>
+
+<body>
+<!--顶部搜索-->
+<div class="wrap-search">
+    <span class="mui-icon mui-icon-search" style="line-height: 30px;color: #AAAAAA;font-size: 16px;"></span>
+    <span style="line-height: 30px;color: #AAAAAA;font-size: 14px;">红烧排骨</span>
+</div>
+
+<div class="mui-content">
+    <!--轮播图-->
+    <div id="slider" class="mui-slider">
+        <div class="mui-slider-group mui-slider-loop">
+            <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#">
+                    <img src="../images/banner3.jpg">
+                </a>
+            </div>
+            <!-- 第一张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="../images/banner1.jpg">
+                </a>
+            </div>
+            <!-- 第二张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="../images/banner2.jpg">
+                </a>
+            </div>
+            <!-- 第三张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="../images/banner3.jpg">
+                </a>
+            </div>
+            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#">
+                    <img src="../images/banner1.jpg">
+                </a>
+            </div>
+        </div>
+        <div class="mui-slider-indicator">
+            <div class="mui-indicator mui-active"></div>
+            <div class="mui-indicator"></div>
+            <div class="mui-indicator"></div>
+            <div class="mui-indicator"></div>
+        </div>
+    </div>
+
+    <div class="nav">
+        <div style="padding: 2px 0;">
+            <div id="segmentedControl" class="mui-segmented-control">
+                <a class="mui-control-item mui-active" href="#item1">官方发布</a>
+                <a class="mui-control-item" href="#item2">更多菜谱</a>
+            </div>
+        </div>
+        <div>
+            <div id="item1" class="mui-control-content mui-active">
+                <!--菜谱分类导航-->
+                <div class="dishes-nav">
+                    <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                        <div class="mui-scroll" style="background: white;">
+                            <a class="mui-control-item mui-active">
+                                <span>泰国菜</span>
+                            </a>
+                            <a class="mui-control-item">
+                                <span>湘菜</span>
+                            </a>
+                            <a class="mui-control-item">
+                                <span>川菜</span>
+                            </a>
+                            <a class="mui-control-item">
+                                <span>东北菜</span>
+                            </a>
+                            <a class="mui-control-item">
+                                <span>台湾菜</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="home-dishes-list ">
+                            <div class="home-dishes-item">
+                                <img src="../images/home-dishes.jpg" style="width: 100%;height: 150px;"/>
+                                <div class="home-dishes-item-text mui-ellipsis">
+                                    <span class="mui-ellipsis dark-medium"
+                                          style="text-align: center; margin-left: 5px;">红烧排骨</span>
+                                    <span id="like" class="mui-icon iconfont icon-shoucang2"></span>
+                                    <span id="collect" class="mui-icon iconfont icon-comment"></span>
+                                </div>
+                            </div>
+
+                            <div class="home-dishes-item">
+                                <img src="../images/home-dishes.jpg" style="width: 100%;height: 150px;"/>
+                                <div class="home-dishes-item-text mui-ellipsis">
+                                    <span class="mui-ellipsis dark-medium"
+                                          style="text-align: center; margin-left: 5px;">红烧排骨</span>
+                                    <span id="like" class="mui-icon iconfont icon-shoucang2"></span>
+                                    <span id="collect" class="mui-icon iconfont icon-comment"></span>
+                                </div>
+                            </div>
+
+                            <div class="home-dishes-item">
+                                <img src="../images/home-dishes.jpg" style="width: 100%;height: 150px;"/>
+                                <div class="home-dishes-item-text mui-ellipsis">
+                                    <span class="mui-ellipsis dark-medium"
+                                          style="text-align: center; margin-left: 5px;">红烧排骨</span>
+                                    <span id="like" class="mui-icon iconfont icon-shoucang2"></span>
+                                    <span id="collect" class="mui-icon iconfont icon-comment"></span>
+                                </div>
+                            </div>
+
+                            <div class="home-dishes-item">
+                                <img src="../images/home-dishes.jpg" style="width: 100%;height: 150px;"/>
+                                <div class="home-dishes-item-text mui-ellipsis">
+                                    <span class="mui-ellipsis dark-medium"
+                                          style="text-align: center; margin-left: 5px;">红烧排骨</span>
+                                    <span id="like" class="mui-icon iconfont icon-shoucang2"></span>
+                                    <span id="collect" class="mui-icon iconfont icon-comment"></span>
+                                </div>
+                            </div>
+
+                            <div class="home-dishes-item">
+                                <img src="../images/home-dishes.jpg" style="width: 100%;height: 150px;"/>
+                                <div class="home-dishes-item-text mui-ellipsis">
+                                    <span class="mui-ellipsis dark-medium"
+                                          style="text-align: center; margin-left: 5px;">红烧排骨</span>
+                                    <span id="like" class="mui-icon iconfont icon-shoucang2"></span>
+                                    <span id="collect" class="mui-icon iconfont icon-comment"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="item2" class="mui-control-content">
+                <!--菜谱分类导航-->
+                <div class="dishes-nav">
+                    <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                        <div class="mui-scroll" style="background: white;">
+                            <a class="mui-control-item mui-active">
+                                <span>泰国菜</span>
+                            </a>
+                            <a class="mui-control-item">
+                                <span>湘菜</span>
+                            </a>
+                            <a class="mui-control-item">
+                                <span>川菜</span>
+                            </a>
+                            <a class="mui-control-item">
+                                <span>东北菜</span>
+                            </a>
+                            <a class="mui-control-item">
+                                <span>台湾菜</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="home-dishes-list ">
+                            <div class="home-dishes-item">
+                                <img src="../images/home-dishes.jpg" style="width: 100%;height: 150px;"/>
+                                <div class="home-dishes-item-text mui-ellipsis">
+                                    <span class="mui-ellipsis dark-medium"
+                                          style="text-align: center; margin-left: 5px;">红烧排骨</span>
+                                    <span id="like" class="mui-icon iconfont icon-shoucang2"></span>
+                                    <span id="collect" class="mui-icon iconfont icon-comment"></span>
+                                </div>
+                            </div>
+
+                            <div class="home-dishes-item">
+                                <img src="../images/home-dishes.jpg" style="width: 100%;height: 150px;"/>
+                                <div class="home-dishes-item-text mui-ellipsis">
+                                    <span class="mui-ellipsis dark-medium"
+                                          style="text-align: center; margin-left: 5px;">红烧排骨</span>
+                                    <span id="like" class="mui-icon iconfont icon-shoucang2"></span>
+                                    <span id="collect" class="mui-icon iconfont icon-comment"></span>
+                                </div>
+                            </div>
+
+                            <div class="home-dishes-item">
+                                <img src="../images/home-dishes.jpg" style="width: 100%;height: 150px;"/>
+                                <div class="home-dishes-item-text mui-ellipsis">
+                                    <span class="mui-ellipsis dark-medium"
+                                          style="text-align: center; margin-left: 5px;">红烧排骨</span>
+                                    <span id="like" class="mui-icon iconfont icon-shoucang2"></span>
+                                    <span id="collect" class="mui-icon iconfont icon-comment"></span>
+                                </div>
+                            </div>
+
+                            <div class="home-dishes-item">
+                                <img src="../images/home-dishes.jpg" style="width: 100%;height: 150px;"/>
+                                <div class="home-dishes-item-text mui-ellipsis">
+                                    <span class="mui-ellipsis dark-medium"
+                                          style="text-align: center; margin-left: 5px;">红烧排骨</span>
+                                    <span id="like" class="mui-icon iconfont icon-shoucang2"></span>
+                                    <span id="collect" class="mui-icon iconfont icon-comment"></span>
+                                </div>
+                            </div>
+
+                            <div class="home-dishes-item">
+                                <img src="../images/home-dishes.jpg" style="width: 100%;height: 150px;"/>
+                                <div class="home-dishes-item-text mui-ellipsis">
+                                    <span class="mui-ellipsis dark-medium"
+                                          style="text-align: center; margin-left: 5px;">红烧排骨</span>
+                                    <span class="like" class="mui-icon iconfont icon-shoucang2"></span>
+                                    <span class="collect" class="mui-icon iconfont icon-comment"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../js/mui.js"></script>
+<script type="text/javascript" src="../js/castapp.js"></script>
+<script>
+    ca.init();
+
+    /*点击菜谱跳转到菜谱详情页*/
+    function click_event() {
+        var cell = ca.className('home-dishes-item');
+        for (var i = 0; i < cell.length; i++) {
+            cell[i].addEventListener('tap', function () {
+                console.log('dudh')
+                // var item_id = this.getAttribute('id_data');
+                // localStorage.setItem('item_id', item_id);
+
+                ca.newInterface({
+                    url: '/html/dishes/dishestab.html',
+                    id: '/html/dishes/dishestab'
+                });
+
+
+            });
+        }
+    }
+
+    click_event();
+</script>
+</body>

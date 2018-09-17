@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../../css/style.css" />
+		<script src="../../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../../js/castapp.js" ></script>
+		<style>
+			.integral-num{
+				margin-top: 15%;
+			}
+			.integral-num p{
+				color: black;
+				font-size: 16px;
+				margin-bottom: 20px;
+			}
+			.integral-num span{
+				color: red;
+				font-size: 16px;
+				font-weight: bold;
+			}
+			/*收支明细和获取积分按钮*/
+			.btn button{
+				border: 1px solid red;
+				color: red;
+				margin: 8% 10px;
+			}
+			/*红包图片*/
+			#coupon-img{
+				margin:6%;
+				width: 30%;
+			}
+			
+			/*兑换红包*/
+			#integral-exchange{
+				color: white;
+				background: red;
+				border: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">我的积分</h1>
+	</header>
+	<div class="mui-content" style="text-align: center;">
+	    <div class="integral-num">
+	    	<p>当前可用积分</p>
+	    	<span>500</span>
+	    </div>
+	    	<div class="btn">
+	    		<button id="integral-record">收支明细</button>
+	    		<button id="get-integral">获取积分</button>
+	    	</div>
+	    	<h5 style="">可兑换红包</h5>
+	    	<img id="coupon-img" src="../../../images/coupon.png"/>
+ 			<div>
+	    		<button id="integral-exchange">兑换红包</button>
+			</div>
+	</div>
+	
+		
+		<script type="text/javascript">
+			ca.init();
+			//收支明细
+			var get-integral = ca.id('get-integral');
+			get-integral.addEventListener('tap',function(){
+				ca.newInterface({
+					url:'/html/my/integral/get-integral.html',
+					id:'/html/my/integral/get-integral'
+				})
+			});
+			
+			//获取积分
+			var integral-exchange = ca.id('integral-exchange');
+			integral-exchange.addEventListener('tap',function(){
+				ca.newInterface({
+					url:'/html/my/integral/integral-exchange.html',
+					id:'/html/my/integral/integral-exchange
+			});
+			
+			
+			//兑换红包
+			var integral-exchange = ca.id('integral-exchange');
+			integral-exchange.addEventListener('tap',function(){
+				ca.newInterface({
+					url:'/html/my/integral/integral-exchange.html',
+					id:'/html/my/integral/integral-exchange
+			});
+		</script>
+	</body>
+
+</html>

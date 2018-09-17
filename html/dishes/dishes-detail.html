@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+          <script src="../../js/mui.min.js"></script>
+<script type="text/javascript" src="../../js/castapp.js"></script>
+    <link href="../../css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../css/iconfont.css"/>
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <style>
+        /*菜品图片*/
+        .dishes-img {
+            padding-bottom: 10px;
+        }
+
+        /*用户头像*/
+        .head-icon {
+            margin-left: 20px;
+            margin-top: 15px;
+            width: 60px;
+            height: 60px;
+            border-radius: 60px;
+            position: relative;
+            top: -30px;
+            left: -10px;
+        }
+
+        /*用户名*/
+        #user-name {
+            text-align: center;
+            margin-left: 10px;
+            line-height: 40px;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        /*菜品描述*/
+        .dishes-describe {
+            padding: 10px 10px 0px 10px;
+        }
+
+        /*菜名*/
+        #dishes-name {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 18px;
+            position: relative;
+            left: -70px;
+            margin-bottom: 10px;
+        }
+
+        /*菜品详细描述*/
+        #dishes-describe-detail {
+            text-indent: 2em;
+        }
+
+        /*点赞、收藏、评论、下载*/
+       
+       .operation-bar{
+       	overflow: hidden;
+		border-bottom: 1px solid #DDDDDD;
+       }
+       
+        .user-operation {
+        	float: right;
+        	position: relative;
+            overflow: hidden;
+            width: 50%;
+        }
+
+        .user-operation-item {
+            width: 20%;
+            float: left;
+            text-align: center;
+            display: block;
+            position: relative;
+            top: -5px;
+        }
+
+		.user-operation-item  span{
+			font-size: 28px;
+		}
+
+        .user-operation-item-text {
+            font-size: 14px;
+            position: relative;
+            top: -3px;
+            color: #666;
+        }
+
+        /*评价列表*/
+        #comment_list {
+            padding: 5px;
+        }
+
+        .comment-list-item {
+            margin-top: 10px;
+            padding: 0px 10px;
+            border-bottom: 1px solid #DDDDDD;
+        }
+
+        .comment-head-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            position: relative;
+        }
+
+        .comment-user-name {
+            font-size: 15px;
+            position: relative;
+            top: -12px
+        }
+
+    </style>
+</head>
+
+<body>
+<header class="mui-bar mui-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <h1 class="mui-title">菜品详情</h1>
+    <a class="mui-pull-right" style="margin-right: 10px;"><span class="mui-icon iconfont icon-fenxiang"></span></a>
+</header>
+<div class="mui-content" style="background: white;">
+    <div class="dishes-img">
+        <img src="../../images/home-dishes.jpg"/>
+        <div>
+            <img id="user-icon" src="../../images/head-icon.jpg" class="mui-pull-left head-icon"/>
+            <span id="user-name">张晓明</span>
+        </div>
+    </div>
+
+    <div class="dishes-describe">
+        <h2 id="dishes-name">红烧排骨</h2>
+        <p id="dishes-describe-detail">
+            酸辣土豆丝是一道人见人爱的家常菜，制作原料有土豆、辣椒、白醋等，虽然价格便宜但是酸辣可口的味道却是大家喜爱的。无论是家庭餐桌、还是饭馆酒店几乎都能见到它的身影，虽然酸辣土豆丝是一道普通的菜肴，但是能够做好也是很不容易的，如何才能保持土豆丝熟而脆爽是关键，这个和土豆的选择、土豆丝的处理、炒制时的时间火候的把握有着密切的关系。土豆最好选择含水量高的新土豆，土豆丝要过水，炒制时大火快炒勤翻动，掌握了这些窍门相信你也能做出饭店水平。</p>
+    </div>
+
+    <div class="operation-bar">
+    	<div class="user-operation">
+        <div class="user-operation-item mui-ellipsis" id="download" style="text-align: center;display: block;">
+            <span class="mui-icon mui-icon-email"></span>
+            <!--<span class="user-operation-item-text">下载</span>-->
+            <!--<span class="user-operation-item-text">10000</span>-->
+        </div>
+        <div class="user-operation-item" id="comment">
+            <span class="mui-icon mui-icon-email"></span>
+            <!--&lt;!&ndash;<span class="user-operation-item-text">评论</span>&ndash;&gt;-->
+           <!--<span class="user-operation-item-text">10000</span>-->
+        </div>
+        <div class="user-operation-item" id="want">
+            <span class="mui-icon mui-icon-email"></span>
+            <!--<span class="user-operation-item-text">想买</span>-->
+           <!--<span class="user-operation-item-text">10000</span>-->
+        </div>
+        <div class="user-operation-item" id="praise">
+            <span class="mui-icon mui-icon-email"></span>
+            <!--<span class="user-operation-item-text">赞</span>-->
+            <!--<span class="user-operation-item-text">10000</span>-->
+        </div>
+         <div class="user-operation-item" id="collect">
+            <span class="mui-icon mui-icon-email"></span>
+            <!--<span class="user-operation-item-text">收藏</span>-->
+            <!--<span class="user-operation-item-text">10000</span>-->
+        </div>
+    </div>
+    </div>
+
+    <div class="comment">
+        <div id="comment_list">
+            <h5 class="mui-content-padded" style="padding-bottom: 10px;">客户评价</h5>
+            <div class="comment-list-item">
+                <div class="mui-ellipsis">
+                    <img class="comment-head-icon" src="../../images/head-icon.jpg">
+                    <span><span class="comment-user-name">会飞的鱼</span><span class="mui-pull-right"
+                                                                           style="font-size: 15px;color: #666;">2016-03-25</span></span>
+                </div>
+                <p style="padding-top: 5px;">饭送的很快，跟给力下次还来买，饭送的很快，跟给力下次还来买，饭送的很快，跟给力下次还来买，饭送的很快，跟给力下次还来买，</p>
+            </div>
+            <div class="comment-list-item">
+                <div class="mui-ellipsis">
+                    <img class="comment-head-icon" src="../../images/head-icon.jpg">
+                    <span><span class="comment-user-name">会飞的鱼</span><span class="mui-pull-right"
+                                                                           style="font-size: 15px;color: #666;">2016-03-25</span></span>
+                </div>
+                <p style="padding-top: 5px;">饭送的很快，跟给力下次还来买，饭送的很快，跟给力下次还来买，饭送的很快，跟给力下次还来买，饭送的很快，跟给力下次还来买，</p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    ca.init();
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <style>
+		.public-line{
+			margin-top: 250px;
+		}	
+    </style>
+</head>
+
+<body>
+<header class="mui-bar mui-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <h1 class="mui-title">登录</h1>
+</header>
+
+<div class="mui-content">
+    <div class="login-form public-margin-top">
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <input id="userId" type="text" class="mui-input-clear" placeholder="账号">
+            </div>
+        </form>
+        <form class="mui-input-group">
+         <div class="mui-input-row "style="margin-top: 5px;">
+                <input id="password" type="password" class="mui-input-password" placeholder="密码">
+            </div>
+</form>
+        <button class="public-green-btn public-btn-block public-margin-top">登录</button>
+        <div class="public-margin-top" style="width:90%;margin:25px auto;">
+            <button id="forget-password" class="mui-btn-link mui-pull-left" style="padding: 0px;">去注册</button>
+            <button id="register" class="mui-btn-link mui-pull-right" style="padding: 0px;">忘记密码？</button>
+        </div>
+    </div>
+    <div class="login-div">
+    	<div class="public-line"></div>
+    </div>
+</div>
+
+<script src="../../js/mui.min.js"></script>
+<script type="text/javascript" src="../../js/castapp.js"></script>
+<script type="text/javascript">
+    ca.init();
+    var userId = ca.id('userId');
+    var password = ca.id('password');
+    var forgetPassword = ca.id('forget-password');
+    forgetPassword.addEventListener('tap', function () {
+        ca.newInterface({
+            url: 'forgetPassword.html',
+            id: 'forgetPassword'
+        });
+    });
+    var register = ca.id('register');
+    register.addEventListener('tap', function () {
+        ca.newInterface({
+            url: 'register.html',
+            id: 'register'
+        });
+    });
+
+</script>
+</body>
+
+</html>
